@@ -1,38 +1,59 @@
 .App {
-  text-align: center;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   width: 100vw;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+   margin: 0;
+   padding: 0;
+   background-color: #282828;
+   color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.addTask {
+   height: 15vh;
+   background-color: #121212;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.list {
+   height: auto;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   padding-top: 50px;
+   flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.task {
+   width: 500px;
+   height: 50px;
+   display: flex;
+   margin: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 12px;
+   border: 3px solid #c3c3c3;
+   border-radius: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task button:hover {
+   width: auto;
+   height: 20px;
+   background-color: #9a9a9a;
+}
+
+.task button {
+   width: auto;
+   height: 20px;
+   margin-left: 5px;
+   text-align: center;
 }
