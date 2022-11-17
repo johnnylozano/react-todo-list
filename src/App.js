@@ -17,6 +17,7 @@ function App() {
          taskName: newTask,
          completed: false,
       };
+      if (task.taskName === "") return;
       setTodoList([...todoList, task]); // spread operator
    };
 

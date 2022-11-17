@@ -1,15 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,700&display=swap");
+
 .App {
    display: flex;
    align-items: center;
    flex-direction: column;
    width: 100vw;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: "Montserrat", Helvetica, sans-serif;
 }
 
 body {
    margin: 0;
    padding: 0;
-   background-color: #282828;
+   background-color: #2b282f;
    color: #fff;
 }
 
@@ -21,6 +23,36 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding-bottom: 10px;
+}
+
+.todo-input {
+   padding: 14px 32px 14px 16px;
+   border-radius: 4px 0 0 4px;
+   border: 2px solid #5d0cff;
+   outline: none;
+   width: 320px;
+   background: transparent;
+   color: #fff;
+}
+
+.todo-input::placeholder {
+   color: #e2e2e270;
+}
+
+.add-btn {
+   padding: 16px;
+   border: none;
+   border-radius: 0 4px 4px 0;
+   cursor: pointer;
+   outline: none;
+   background: linear-gradient(
+      90deg,
+      rgb(91, 44, 185) 0%,
+      rgb(67, 6, 105) 100%
+   );
+   color: #fff;
+   text-transform: capitalize;
 }
 
 .list {
@@ -45,15 +77,18 @@ body {
    border-radius: 15px;
 }
 
-.task button:hover {
-   width: auto;
-   height: 20px;
-   background-color: #9a9a9a;
+.icons {
+   display: flex;
+   align-items: center;
+   font-size: 30px;
+   cursor: pointer;
 }
 
-.task button {
-   width: auto;
-   height: 20px;
-   margin-left: 5px;
-   text-align: center;
+.delete-icon {
+   margin-right: 5px;
+   color: rgb(147, 20, 20);
+}
+
+.complete-icon {
+   color: rgb(52, 162, 15);
 }

@@ -8,8 +8,11 @@ export const AddTask = (props) => {
                onChange={props.handleChange}
                placeholder="Enter a task"
                onKeyDown={props.handleEnter}
+               className="todo-input"
             />
-            <button onClick={props.addTask}>Add Task</button>
+            <button onClick={props.addTask} className="add-btn">
+               Add Task
+            </button>
          </div>
       </div>
    );
