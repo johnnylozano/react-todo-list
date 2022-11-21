@@ -10,4 +10,4 @@ What is a ToDo List? The definition is a simple one. It's a list of tasks you ne
 ---
 
 ## How to Install
-            npm i && npm install
+run `npm i && npm install`
