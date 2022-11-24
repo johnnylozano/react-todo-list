@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import { AddTask } from "./AddTask";
 import "./App.css";
 import { Task } from "./Task";
+
+export const AppContext = createContext();
 
 function App() {
    const [todoList, setTodoList] = useState([]);
@@ -19,6 +21,7 @@ function App() {
       };
       if (task.taskName === "") return;
       setTodoList([...todoList, task]); // spread operator
+      setNewTask("");
    };
 
    const deleteTask = (id) => {
@@ -45,11 +48,14 @@ function App() {
 
    return (
       <div className="App">
-         <AddTask
-            handleChange={handleChange}
-            addTask={addTask}
-            handleEnter={handleEnter}
-         />
+         <AppContext.Provider value={{ newTask, setNewTask }}>
+            <AddTask
+               handleChange={handleChange}
+               addTask={addTask}
+               handleEnter={handleEnter}
+               value={newTask}
+            />
+         </AppContext.Provider>
          <div className="list">
             {todoList.map((task, key) => {
                return (

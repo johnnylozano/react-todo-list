@@ -9,6 +9,7 @@ export const AddTask = (props) => {
                placeholder="Enter a task"
                onKeyDown={props.handleEnter}
                className="todo-input"
+               value={newTask}
             />
             <button onClick={props.addTask} className="add-btn">
                Add Task
