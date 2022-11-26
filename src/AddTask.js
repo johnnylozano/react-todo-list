@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { AppContext } from "./App";
+
 export const AddTask = (props) => {
+   const { newTask } = useContext(AppContext);
+
    return (
       <div className="addTask">
          <h1>Add New Task</h1>

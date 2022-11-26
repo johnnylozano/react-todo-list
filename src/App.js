@@ -48,12 +48,11 @@ function App() {
 
    return (
       <div className="App">
-         <AppContext.Provider value={{ newTask, setNewTask }}>
+         <AppContext.Provider value={{ newTask }}>
             <AddTask
                handleChange={handleChange}
                addTask={addTask}
                handleEnter={handleEnter}
-               value={newTask}
             />
          </AppContext.Provider>
          <div className="list">
